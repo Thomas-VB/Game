@@ -1,19 +1,17 @@
 
+body{
+     background-image: url("../../istockphoto-922427928-612x612.jpg");
+     background-color: #cccccc;
+     background-repeat: repeat;
+     background-position: center;
+     background-clip: border-box;
+}
 
+/* 
 .container{
-    background-image: url("../../istockphoto-922427928-612x612.jpg");
-    background-color: #cccccc;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-clip: border-box;
     background-size: 100%;
     width: 100%;
-    min-width: 1000px;
-    min-height: 2000px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+} */
 
 .miner{
     position: absolute;
@@ -21,7 +19,26 @@
     height: auto;
 }
 
-#tabel table{
+.grid{
+    /* background-image: url("../../istockphoto-922427928-612x612.jpg"); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 1000px;
+
+}
+
+
+.cell{
+    background-color: rgba(0, 128, 0, 0.438);
+    min-width: 10%;
+    min-height: 10% ;
+    border: 2px solid white;
+    margin: 0;
+}
+/* #tabel table{
     min-width: 1000px;
     min-height: 1000px;
     position: relative;
@@ -36,7 +53,7 @@
 #tabel table, tr, td{
     border: 2px solid white;
     margin: 0;
-}
+} */
 
 @media only screen and (min-width: 31rem) {
     table{

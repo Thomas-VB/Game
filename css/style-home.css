@@ -1,4 +1,10 @@
 .container{
+    background-image: url("../../istockphoto-922427928-612x612.jpg");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: border-box;
+    background-size: 100%;
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
