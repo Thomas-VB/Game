@@ -1,0 +1,26 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ button{
+    width: 10rem;
+    background-color: crimson;
+    color: white;
+    margin-bottom: 50px;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:visited{
+    text-decoration: none;
+    text-decoration-color: white;
+}

@@ -1,0 +1,45 @@
+
+
+.container{
+    background-image: url("../../istockphoto-922427928-612x612.jpg");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: border-box;
+    background-size: 100%;
+    width: 100%;
+    min-width: 1000px;
+    min-height: 2000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.miner{
+    position: absolute;
+    width: auto;
+    height: auto;
+}
+
+#tabel table{
+    min-width: 1000px;
+    min-height: 1000px;
+    position: relative;
+}
+
+#tabel table tr td{
+    background-color: rgba(0, 128, 0, 0.438);
+    width: 10%;
+    margin: 0;
+}
+
+#tabel table, tr, td{
+    border: 2px solid white;
+    margin: 0;
+}
+
+@media only screen and (min-width: 31rem) {
+    table{
+        min-width: 700px;
+    }
+  }
