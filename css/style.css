@@ -1,62 +1,72 @@
 
 body{
      background-image: url("../assets/istockphoto-922427928-612x612.png");
-     background-color: #cccccc;
      background-repeat: repeat;
-     background-position: center;
-     background-clip: border-box;
 }
 
-/* 
-.container{
-    background-size: 100%;
-    width: 100%;
-} */
+main{
+    max-width: 770px;
+    margin:auto;
+}
 
-.miner{
-    position: absolute;
-    width: auto;
-    height: auto;
+h1{
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+    color: black;
+    background-color: green;
+    text-transform: capitalize;
+    border: 2px solid darkgreen;
+    padding: 5px;
 }
 
 .grid{
-    /* background-image: url("../../istockphoto-922427928-612x612.jpg"); */
-    display: flex;
+    width: 770px;
+    height: 770px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 1000px;
-    height: 1000px;
 
 }
-
 
 .cell{
-    background-color: rgba(0, 128, 0, 0.438);
-    min-width: 10%;
-    min-height: 10% ;
-    border: 2px solid white;
-    margin: 0;
-}
-/* #tabel table{
-    min-width: 1000px;
-    min-height: 1000px;
-    position: relative;
-}
+    float: left;
+    width:75px;
+    height:75px;
+    background-color: rgba(2, 122, 2, 0.501);
+    border:1px solid whitesmoke;
+    display: table-cell;
+    vertical-align: middle;
 
-#tabel table tr td{
-    background-color: rgba(0, 128, 0, 0.438);
-    width: 10%;
-    margin: 0;
+}    
+
+.miner{
+    position: absolute;
+    margin: 7px;
 }
 
-#tabel table, tr, td{
-    border: 2px solid white;
-    margin: 0;
-} */
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+    font-family: 'Audiowide' , cursive;
+}
 
-@media only screen and (min-width: 31rem) {
-    table{
-        min-width: 700px;
-    }
-  }
+.button{
+    background-color: green;
+    font-family: 'Audiowide', cursive;
+    border-color: darkgreen;
+    border-radius: 2px;
+}
+
+#time{
+    background-color: green;
+    padding:10px;
+    border: 2px solid darkgreen;
+}
+
+#points{
+    background-color: green;
+    padding: 10px;
+    border: 2px solid darkgreen;
+}
