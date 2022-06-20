@@ -1,95 +1,25 @@
-function Cell(row, column, dig, points)
-{
-    return{
-        row: row,
-        column: column,
-        dig: dig,
-        points: points
-    }
-}
+let miner = document.querySelector('.miner');
+let move = 100;
 
-function Grid(gridSize)
-{
-    var grid = {};
-    for(var row = 0; row < gridSize; column++)
-    {
-            grid[row + "" + column] = Cell(row, column, false, false, false, 0);
-    }
-    grid = randomlyAssignPoints(grid, pointAmount);
-    return board;
+window.addEventListener('load', () =>{
+	miner.style.position = 'absolute';
+	miner.style.left = 0;
+	miner.style.top = 0;
+});
 
-}
-
-let move = function()
-{
-    direction = getFirstDirection();
-
-    if(direction === DIRECTION.RIGHT)
-    {
-        column++;
-    }
-    else if(direction === DIRECTION.LEFT)
-    {
-        column--;
-    }
-    else if(direction == DIRECTION.UP)
-    {
-        row--;
-    }
-    else if(direction == DIRECTION.DOWN)
-    {
-        row++;
-    }
-}
-
-function listenForInput( game )
-{
-	let firstTime = true;
-
-	let movingVertically = function() {
-		return !game.exceededMaxDirections() &&
-			   game.getLastDirection() !== DIRECTION.RIGHT &&
-	    	   game.getLastDirection() !== DIRECTION.LEFT;
-	};
-
-	let movingHorizontally = function() {
-		return !game.exceededMaxDirections() && 
-		   	   game.getLastDirection() !== DIRECTION.UP &&
-	    	   game.getLastDirection() !== DIRECTION.DOWN;
-	};
-
-	let changeDirection = function( event )
-	{
-		if( firstTime )
-		{
-			game.addDirection( DIRECTION.UP );
-			firstTime = false;
-		}
-		else
-		{
-			const LEFT_ARROW = 37;
-			const RIGHT_ARROW = 39;
-			const UP_ARROW = 38;
-			const DOWN_ARROW = 40;
-		    if( event.keyCode == LEFT_ARROW && movingVertically() ) 
-		    {
-		    	game.addDirection( DIRECTION.LEFT );
-		    }
-		    else if( event.keyCode == RIGHT_ARROW && movingVertically() ) 
-		    {
-		    	game.addDirection( DIRECTION.RIGHT );
-		    }
-		    else if( event.keyCode == UP_ARROW && movingHorizontally() )
-		    {
-		    	game.addDirection( DIRECTION.UP );
-		    }
-		    else if( event.keyCode == DOWN_ARROW && movingHorizontally() )
-		    {
-				game.addDirection( DIRECTION.DOWN );
-		    }
-		}
-	};
-
-	document.onkeydown = null;
-	document.addEventListener('keydown', changeDirection );
-}
+window.addEventListener('keyup', (e) =>{
+	switch(e.key){
+		case 'arrowLeft' :
+			miner.style.left = parseInt(miner.style.left) - move + 'px';
+			break;
+		case 'arrowRight' :
+			miner.style.left = parseInt(miner.style.left) - move + 'px';
+			break;
+		case 'arrowUp' :
+			miner.style.top = parseInt(miner.style.top) - move + 'px';
+			break;
+		case 'arrowDown' :
+			miner.style.top = parseInt(miner.style.top) - move + 'px';
+			break;
+	}
+});
