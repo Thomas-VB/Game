@@ -5,11 +5,13 @@ body{
 }
 
 main{
-    max-width: 770px;
+    max-width: 750px;
     margin:auto;
 }
 
 h1{
+    font-size: 32px;
+    max-width: 710px;
     text-align: center;
     font-family: 'Audiowide', cursive;
     color: black;
@@ -20,8 +22,8 @@ h1{
 }
 
 .grid{
-    width: 650px;
-    height: 650px;
+    width: 750px;
+    height: 750px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -30,8 +32,8 @@ h1{
 
 .cell{
     float: left;
-    width:60px;
-    height:60px;
+    width:70px;
+    height:70px;
     background-color: rgba(2, 122, 2, 0.501);
     border:1px solid whitesmoke;
     display: table-cell;
@@ -40,8 +42,9 @@ h1{
 }    
 
 .miner{
+    width: 40px;
     position: absolute;
-    margin: 5px;
+    margin: 7px;
 }
 
 .buttons{
