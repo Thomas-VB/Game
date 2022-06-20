@@ -20,8 +20,8 @@ h1{
 }
 
 .grid{
-    width: 770px;
-    height: 770px;
+    width: 650px;
+    height: 650px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -30,8 +30,8 @@ h1{
 
 .cell{
     float: left;
-    width:75px;
-    height:75px;
+    width:60px;
+    height:60px;
     background-color: rgba(2, 122, 2, 0.501);
     border:1px solid whitesmoke;
     display: table-cell;
@@ -41,7 +41,7 @@ h1{
 
 .miner{
     position: absolute;
-    margin: 7px;
+    margin: 5px;
 }
 
 .buttons{
