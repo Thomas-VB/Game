@@ -64,9 +64,9 @@
 
       display.textContent = "Time left: " + seconds;
 
-    //   if (--timer < 0) {
-    //     timer = duration;
-    //   }
+      if (--timer < 0) {
+        timer = duration;
+      }
 
       if (seconds == 0) {
         display.textContent = "STOP"
