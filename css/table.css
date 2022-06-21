@@ -1,0 +1,97 @@
+
+body{
+    background-image: url("../assets/istockphoto-922427928-612x612.png");
+    background-repeat: repeat;
+}
+main{
+   max-width: 750px;
+   margin:auto;
+}
+
+h1{
+   max-width: 710px;
+   text-align: center;
+   font-family: fp-head-pro, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+   color: white;
+   background-color: rgba(2, 122, 2, 0.759);
+   text-transform: capitalize;
+   border: 2px solid white;
+   padding: 5px 5px 10px 5px;
+}
+
+
+#grid{
+   width: 750px;
+   height: 750px;
+   
+
+}
+
+.container{
+
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+
+table{
+    border-collapse: collapse;
+
+}
+
+tr{
+    margin-bottom: -3px;
+}
+
+td{
+   float: left;
+   width:70px;
+   height:70px;
+   background-color: rgba(2, 122, 2, 0.501);
+   border:1px solid whitesmoke;
+   display: table-cell;
+   vertical-align: middle;
+
+}    
+
+.miner{
+   position: absolute;
+   top: 1px;
+   left: 1px;
+}
+
+.buttons{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   margin: 20px;
+   font-family: courier-std, monospace;
+   font-weight: 700;
+   font-style: normal;
+}
+
+.button{
+   color: white;
+   background-color: rgba(2, 122, 2, 0.759);
+   font-family: fp-head-pro, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+   border-color: white;
+   border-radius: 2px;
+}
+
+#time{
+   color: white;
+   background-color: rgba(2, 122, 2, 0.759);
+   padding:10px;
+   border: 2px solid white;
+}
+
+#points{
+   color: white;
+   background-color: rgba(2, 122, 2, 0.759);
+   padding: 10px;
+   border: 2px solid white;
+}
