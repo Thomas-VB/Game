@@ -1,5 +1,6 @@
 let miner = document.querySelector('.miner');
 let move = 75;
+let grid = document.querySelector('.grid');
 
 window.addEventListener('load', () => {
 			miner.style.position = 'absolute';
@@ -68,3 +69,25 @@ const gridMatrixGrass = [
 const gridSystem = new GridSystem(gridMatrix, 1, 1);
 gridSystem.render();
 
+
+/*
+const timeleft = 60;
+const downloadTimer = setInterval(function(){
+  if(timeleft <= 0){
+    clearInterval(downloadTimer);
+    document.getElementById("time").innerHTML = "STOP";
+  } else {
+    document.getElementById("time").innerHTML = "Time: " + timeleft;
+  }
+  timeleft -= 1;
+}, 1000);
+
+const restart = document.getElementById("new-game-button");
+
+if (
+	restartGame.addEventListener("click", function () {
+})) {
+    location.reload()
+}
+
+*/

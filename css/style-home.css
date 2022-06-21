@@ -14,11 +14,17 @@
 }
 
  button{
-    width: 10rem;
-    background-color: crimson;
+    width: 500px;
+    text-align: center;
+    font-size: 32px;
+    font-family: fp-head-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
     color: white;
-    margin-bottom: 50px;
-    text-decoration: none;
+    background-color: rgba(2, 122, 2, 0.759);
+    text-transform: capitalize;
+    border: 2px solid white;
+    padding: 5px 5px 10px 5px;
 }
 
 a{
