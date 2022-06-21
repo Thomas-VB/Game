@@ -1,12 +1,12 @@
+
 let miner = document.querySelector('.miner');
-const canvas = document.querySelector('canvas');
 let move = 73;
 
-/*window.addEventListener('load', () => {
+window.addEventListener('load', () => {
 	miner.style.position = 'absolute';
 	miner.style.left = 0;
 	miner.style.top = 0;
-});*/
+});
 
 
 window.addEventListener('keyup', (e) =>{
@@ -25,5 +25,12 @@ window.addEventListener('keyup', (e) =>{
 			break;
 	}
 });
+
+if (miner <= 0){
+	miner = 0
+}else if(miner >= 1000){
+	miner = 50
+}
+
 
 
