@@ -11,3 +11,4 @@ def home():
 
 def move(direction):
     if direction == 'left':
+        then; 
