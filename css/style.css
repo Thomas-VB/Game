@@ -11,12 +11,14 @@ main{
 h1{
     max-width: 710px;
     text-align: center;
-    font-family: 'Audiowide', cursive;
-    color: black;
-    background-color: green;
+    font-family: fp-head-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    background-color: rgba(2, 122, 2, 0.759);
     text-transform: capitalize;
-    border: 2px solid darkgreen;
-    padding: 5px;
+    border: 2px solid white;
+    padding: 5px 5px 10px 5px;
 }
 
 
@@ -51,24 +53,31 @@ h1{
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 20px;
-    font-family: 'Audiowide' , cursive;
+    font-family: courier-std, monospace;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .button{
-    background-color: green;
-    font-family: 'Audiowide', cursive;
-    border-color: darkgreen;
+    color: white;
+    background-color: rgba(2, 122, 2, 0.759);
+    font-family: fp-head-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    border-color: white;
     border-radius: 2px;
 }
 
 #time{
-    background-color: green;
+    color: white;
+    background-color: rgba(2, 122, 2, 0.759);
     padding:10px;
-    border: 2px solid darkgreen;
+    border: 2px solid white;
 }
 
 #points{
-    background-color: green;
+    color: white;
+    background-color: rgba(2, 122, 2, 0.759);
     padding: 10px;
-    border: 2px solid darkgreen;
+    border: 2px solid white;
 }
