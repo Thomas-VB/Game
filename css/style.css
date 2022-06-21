@@ -22,7 +22,7 @@ h1{
 }
 
 
-/* .grid{
+ .grid{
     width: 750px;
     height: 750px;
     flex-wrap: wrap;
@@ -42,11 +42,7 @@ h1{
 
 }    
 
-.miner{
-    position: absolute;
-    top: 1px;
-    left: 1px;
-} */
+
 
 .buttons{
     display: flex;

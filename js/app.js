@@ -1,15 +1,27 @@
+class GridSystem {
+	constructor(miner, matrix, playerX, PlayerY)
+	{
+		this.matrix = matrix;
+		this.miner = window.addEventListener('load', () => {
+			miner.style.position = 'absolute';
+			miner.style.left = 0;
+			miner.style.top = 0;
+		this.cellSize = 70;
+		this.padding = 2;
+		this.player = {x: minerX, y: minerY};
+		this.matrix[minerY][minerX] = 2;
+		})
 
-let miner = document.querySelector('.miner');
-let move = 73;
-
-window.addEventListener('load', () => {
-	miner.style.position = 'absolute';
-	miner.style.left = 0;
-	miner.style.top = 0;
-});
+	
+	miner = document.querySelector('.miner');
+	}
 
 
-window.addEventListener('keyup', (e) =>{
+}
+
+
+
+/*window.addEventListener('keyup', (e) =>{
 	switch(e.key) {
 		case 'ArrowLeft' :
 			miner.style.left = parseInt(miner.style.left) - move + 'px';
@@ -25,70 +37,47 @@ window.addEventListener('keyup', (e) =>{
 			break;
 	}
 });
-
+ 
 if (cellVal === 5) {
 	color: rgba(2, 122, 2, 0.501);
 } else if (cellVal === 2) {
 	color = this.player.color;
-}
-class GridSystem {
-	constructor(matrix, playerX, playerY) {
-		this.matrix = matrix;
-		this.uiContext = this.#getContext(420, 580, "#000");
-		this.outlineContext = this.#getContext(0, 0, "#444");
-		this.topContext = this.#getContext(0, 0, "#111", true);
-		this.cellSize = 40;
-		this.padding = 2;
-		this.player = { x: playerX, y: playerY, color: "orange" };
-		this.matrix[playerY][playerX] = 2;
+}*/
 
-		document.addEventListener("keydown", this.#movePlayer);
-	}
-
-	#isValidMove(x, y) {
-		if (this.matrix[this.player.y + y][this.player.x + x] === 0) {
-			return true;
-		}
-		return false;
-	}
-
-	#updateMatrix(y, x, val) {
-		this.matrix[y][x] = val;
-	}
 
 	#movePlayer = ( { keyCode } ) => {
-		if (keyCode === 37) {
+		if (keyCode === left) {
 			if (this.#isValidMove(-1, 0)) {
-			 this.#updateMatrix(this.player.y, this.player.x, 0);
-			 this.#updateMatrix(this.player.y, this.player.x - 1, 2);
+			 this.#updateMatrix(this.miner.y, this.miner.x, 0);
+			 this.#updateMatrix(this.miner.y, this.miner.x - 1, 2);
 			 this.player.x --;
 			 this.render();
 		 }
-		} else if (keyCode === 39) {
+		} else if (keyCode === top) {
 			if (this.#isValidMove(1, 0)) {
-				this.#updateMatrix(this.player.y, this.player.x, 0);
- 			 	this.#updateMatrix(this.player.y, this.player.x + 1, 2);
+				this.#updateMatrix(this.miner.y, this.miner.x, 0);
+ 			 	this.#updateMatrix(this.miner.y, this.miner.x + 1, 2);
 				this.player.x ++;
 				this.render();
 			}
-		} else if (keyCode === 38) {
+		} else if (keyCode === right) {
 			if (this.#isValidMove(0, -1)) {
-				this.#updateMatrix(this.player.y, this.player.x, 0);
- 			 	this.#updateMatrix(this.player.y - 1, this.player.x, 2);
+				this.#updateMatrix(this.miner.y, this.miner.x, 0);
+ 			 	this.#updateMatrix(this.miner.y - 1, this.miner.x, 2);
 				this.player.y --;
 				this.render();
 			}
-		} else if (keyCode === 40) {
+		} else if (keyCode === bottom) {
 			if (this.#isValidMove(0, 1)) {
-				this.#updateMatrix(this.player.y, this.player.x, 0);
- 			 	this.#updateMatrix(this.player.y + 1, this.player.x, 2);
+				this.#updateMatrix(this.miner.y, this.miner.x, 0);
+ 			 	this.#updateMatrix(this.miner.y + 1, this.miner.x, 2);
 				this.player.y ++;
 				this.render();
 			}
 		}
 	}
 
-	#getCenter(w, h) {
+		#getCenter(w, h) {
 		return {
 			x: window.innerWidth / 2 - w / 2 + "px",
 			y: window.innerHeight / 2 - h / 2 + "px"
@@ -153,6 +142,7 @@ class GridSystem {
 
 
 
+
 const gridMatrix = [
 	[0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
 	[0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
@@ -183,3 +173,4 @@ const gridMatrixGrass = [
 
 const gridSystem = new GridSystem(gridMatrix, 1, 1);
 gridSystem.render();
+
