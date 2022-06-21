@@ -1,3 +1,24 @@
+const timeleft = 60;
+const downloadTimer = setInterval(function(){
+  if(timeleft <= 0){
+    clearInterval(downloadTimer);
+    document.getElementById("time").innerHTML = "STOP";
+  } else {
+    document.getElementById("time").innerHTML = "Time: " + timeleft;
+  }
+  timeleft -= 1;
+}, 1000);
+
+const restart = document.getElementById("new-game-button");
+
+if (
+	restartGame.addEventListener("click", function () {
+})) {
+    location.reload()
+}
+
+
+
 class GridSystem {
 	constructor(miner, matrix, playerX, PlayerY)
 	{
