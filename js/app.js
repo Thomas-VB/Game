@@ -295,3 +295,7 @@ function startTimer(duration, display) {
     display = document.querySelector('#timer');
     startTimer(minute, display);
   };
+
+ function reload(){
+	window.location.reload();
+  }
