@@ -59,7 +59,6 @@
     setInterval(function () {
       seconds = parseInt(timer * 1, 10);
 
-      minutes = minutes < 10 ? "0" + minutes : minutes;
       seconds = seconds < 10 ? "0" + seconds : seconds;
 
       display.textContent = "Time left: " + seconds;

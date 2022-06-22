@@ -275,7 +275,6 @@ function startTimer(duration, display) {
     setInterval(function () {
       seconds = parseInt(timer * 1, 10);
 
-      minutes = minutes < 10 ? "0" + minutes : minutes;
       seconds = seconds < 10 ? "0" + seconds : seconds;
 
       display.textContent = "Time left: " + seconds;
@@ -293,6 +292,6 @@ function startTimer(duration, display) {
 
   window.onload = function () {
     let minute = 60,
-    display = document.querySelector('#time');
+    display = document.querySelector('#timer');
     startTimer(minute, display);
   };
