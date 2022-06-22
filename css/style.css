@@ -3,7 +3,7 @@ body{
      background-image: url("../assets/istockphoto-922427928-612x612.png");
      background-repeat: repeat;
 }
-main{
+/*main{
     max-width: 750px;
     margin:auto;
 }
@@ -22,14 +22,14 @@ h1{
 }
 
 
- /*.grid{
+ .grid{
     width: 750px;
     height: 750px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
-}*/
+}
 
 .cell{
     float: left;
@@ -42,7 +42,7 @@ h1{
 
 }    
 
-
+*/
 
 .buttons{
     display: flex;
