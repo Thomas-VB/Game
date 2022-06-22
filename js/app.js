@@ -179,17 +179,13 @@ gridSystem.render();
 
 let points = document.querySelector("points");
 points = 1500
-let diamond = 1000
-let gold = 500
+let treasure = 1000
 
 
 function addPoints(display) {
 	display.textContent = "Points: " + points;
 	if (diamond) {
-		points + diamond
-		display.textContent = "Points: " + points;
-	}else if(gold){
-		points + gold
+		points + treasure
 		display.textContent = "Points: " + points;
 	}
 	display = document.querySelector("points");
