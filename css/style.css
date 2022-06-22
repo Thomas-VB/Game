@@ -22,14 +22,14 @@ h1{
 }
 
 
- .grid{
+ /*.grid{
     width: 750px;
     height: 750px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
-}
+}*/
 
 .cell{
     float: left;
