@@ -299,3 +299,16 @@ function startTimer(duration, display) {
  function reload(){
 	window.location.reload();
   }
+
+let points = document.querySelector("points");
+let diamond = 1000
+let gold = 500
+
+
+function addPoints() {
+	if (diamond) {
+		points + diamond
+	}else if(gold){
+		points + gold
+	}
+}
