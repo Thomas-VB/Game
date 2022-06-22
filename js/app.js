@@ -1,6 +1,6 @@
 
 function startTimer(duration, display) {
-    let timer = duration, minutes, seconds;
+    let timer = duration, seconds;
     setInterval(function () {
       seconds = parseInt(timer * 1, 10);
 
@@ -13,11 +13,14 @@ function startTimer(duration, display) {
       }
 
       if (seconds == 0) {
-        display.textContent = "STOP"
+        display.textContent = "GAME OVER!"
         timer = 0
     } 
     }, 1000);    
   }
+  setTimeout(function(){
+	location.reload();
+  }, 35000);
 
   window.onload = function () {
     let minute = 30,
@@ -97,7 +100,6 @@ class GridSystem {
 	#getCenter(w, h) {
 		return {
 			x: window.innerWidth / 2 - w / 2 + "px",
-			y: window.innerHeight / 2 - h / 2 + "px"
 		};
 	}
 
@@ -140,11 +142,11 @@ class GridSystem {
 				let color = "#089b20";
 
 				if (cellVal === 1) {
-					color = "brown";
-				} else if (cellVal === 2) {
-					color = this.player.color;
+					color = "#964b00";
 				} else if (cellVal === 3) {
 					color = 'purple';
+				} else if (cellVal === 2) {
+					color = this.player.color;
 				}
 				
 
@@ -152,7 +154,7 @@ class GridSystem {
 				this.outlineContext.fillRect(col * (this.cellSize + this.padding),
 				row * (this.cellSize + this.padding),
 				this.cellSize, this.cellSize);
-
+				
 
 	
 			}
@@ -161,31 +163,18 @@ class GridSystem {
 }
 
 const gridMatrix = [
-	[0, 1, 0, 0, 3, 1, 3, 1, 0, 0],
-	[0, 1, 1, 0, 0, 0, 0, 0, 0, 0],
-	[0, 1, 1, 0, 0, 1, 0, 3, 1, 3],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[3, 0, 1, 0, 0, 1, 0, 0, 0, 0],
-	[0, 0, 3, 1, 1, 1, 0, 0, 0, 0],
-	[0, 0, 0, 1, 0, 0, 0, 0, 3, 0],
-	[0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
-	[0, 1, 3, 0, 0, 0, 0, 0, 1, 0],
-	[0, 0, 0, 0, 3, 0, 0, 0, 0, 0]
+	[0, 1, 0, 0, 3, 1, 3, 1, 0, 0, 0, 0, 0],
+	[0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 1, 1, 0, 0, 1, 0, 3, 1, 3, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[3, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 3, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 1, 0, 0, 0, 0, 3, 0, 0, 0, 0],
+	[0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0],
+	[0, 1, 3, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+	[0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ];
 
 const gridSystem = new GridSystem(gridMatrix, 1, 1);
 gridSystem.render();
-
-let points = document.querySelector("points");
-points = 1500
-let treasure = 1000
-
-
-function addPoints(display) {
-	display.textContent = "Points: " + points;
-	if (diamond) {
-		points + treasure
-		display.textContent = "Points: " + points;
-	}
-	display = document.querySelector("points");
-}
