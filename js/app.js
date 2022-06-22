@@ -20,10 +20,10 @@ function startTimer(duration, display) {
   }
   setTimeout(function(){
 	location.reload();
-  }, 35000);
+  }, 48000);
 
   window.onload = function () {
-    let minute = 30,
+    let minute = 45,
     display = document.querySelector('#timer');
     startTimer(minute, display);
   };
@@ -39,9 +39,9 @@ class GridSystem {
 		this.uiContext = this.#getContext(420, 580, "#000");
 		this.outlineContext = this.#getContext(0, 0, "#FFF");
 		this.topContext = this.#getContext(0, 0, "#111", true);
-		this.cellSize = 50;
+		this.cellSize = 40;
 		this.padding = 2;
-		this.player = { x: playerX, y: playerY, color: 'orange'};
+		this.player = { x: playerX, y: playerY, color: '#c40014'};
 		this.matrix[playerY][playerX] = 2;
 
 		document.addEventListener("keydown", this.#movePlayer);
@@ -145,7 +145,7 @@ class GridSystem {
 				if (cellVal === 1) {
 					color = "#666";
 				} else if (cellVal === 3) {
-					color = 'gold';
+					color = '#ffc11f';
 				} else if (cellVal === 2) {
 					color = this.player.color;
 				}
@@ -166,18 +166,21 @@ class GridSystem {
 }
 
 const gridMatrix = [
-	[0, 1, 0, 0, 3, 1, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 1, 1, 0, 0, 1, 0, 3, 1, 3, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[3, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 3, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 1, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 1, 3, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+	[0, 0, 1, 0, 3, 1, 3, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0],
+	[0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 3, 1, 0, 0, 1, 0, 1, 0],
+	[0, 1, 3, 0, 0, 1, 0, 3, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 0, 0, 0, 0, 0, 0, 1, 3, 1, 0],
+	[0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0],
+	[0, 0, 3, 1, 1, 1, 0, 0, 0, 0, 0, 0, 3, 1, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 1, 3, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 3, 0],
+	[0, 0, 0, 1, 1, 1, 0, 0, 0, 3, 0, 0, 0, 1, 3, 0, 0, 0, 0, 0],
+	[1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+	[3, 1, 0, 0, 1, 0, 0, 1, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
+	[0, 0, 0, 1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0],
+	[0, 0, 3, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 3, 0, 0, 0, 0]
 ];
 
 const gridSystem = new GridSystem(gridMatrix, 1, 1);
