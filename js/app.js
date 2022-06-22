@@ -180,4 +180,17 @@ const gridMatrix = [
 const gridSystem = new GridSystem(gridMatrix, 1, 1);
 gridSystem.render();
 
+let points = document.querySelector("points");
+let diamond = 1000
+let gold = 500
 
+
+function addPoints(display) {
+	if (diamond) {
+		points + diamond
+		display.textContent = "Points: " + diamond;
+	}else if(gold){
+		points + gold
+		display.textContent = "Points: " + gold;
+	}
+}
