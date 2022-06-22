@@ -53,10 +53,9 @@ class GridSystem {
 	#isValidMove(x, y) {
 		if (this.matrix[this.player.y + y][this.player.x + x] === 0) {
 			return true;
-		} else if (this.matrix[this.player.y + y][this.player.x + x] === 3) {
+		}else if (this.matrix[this.player.y + y][this.player.x + x] === 3) {
 			return true;
 		}
-		
 		return false;
 	}
 
@@ -147,8 +146,7 @@ class GridSystem {
 				} else if (cellVal === 2) {
 					color = this.player.color;
 				} else if (cellVal === 3) {
-					color = "purple";
-					
+					color = 'purple';
 				}
 				
 
