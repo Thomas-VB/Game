@@ -4,7 +4,7 @@ body{
      background-repeat: repeat;
 }
 main{
-    max-width: 750px;
+    max-width: 500px;
     margin:auto;
 }
 
@@ -23,12 +23,13 @@ h1{
 
 .buttons{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 10px;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 40px;
     font-family: courier-std, monospace;
     font-weight: 700;
     font-style: normal;
+    
 }
 
 .button{
@@ -39,6 +40,7 @@ h1{
     font-style: normal;
     border-color: white;
     border-radius: 2px;
+    padding: 10px;
 }
 
 #timer{
@@ -46,11 +48,6 @@ h1{
     background-color: rgba(2, 122, 2, 0.759);
     padding:10px;
     border: 2px solid white;
+    margin-top: 20px;
 }
 
-#points{
-    color: white;
-    background-color: rgba(2, 122, 2, 0.759);
-    padding: 10px;
-    border: 2px solid white;
-}
