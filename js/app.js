@@ -85,3 +85,32 @@ if (
 }
 
 */
+
+//* TIMER */
+
+function startTimer(duration, display) {
+    let timer = duration, minutes, seconds;
+    setInterval(function () {
+      seconds = parseInt(timer * 1, 10);
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      display.textContent = "Time left: " + seconds;
+
+      if (--timer < 0) {
+        timer = duration;
+      }
+
+      if (seconds == 0) {
+        display.textContent = "STOP"
+        timer = 0
+    } 
+    }, 1000);    
+  }
+
+  window.onload = function () {
+    let minute = 60,
+    display = document.querySelector('#time');
+    startTimer(minute, display);
+  };
