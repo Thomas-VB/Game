@@ -20,7 +20,7 @@ function startTimer(duration, display) {
   }
 
   window.onload = function () {
-    let minute = 60,
+    let minute = 30,
     display = document.querySelector('#timer');
     startTimer(minute, display);
   };
@@ -181,16 +181,19 @@ const gridSystem = new GridSystem(gridMatrix, 1, 1);
 gridSystem.render();
 
 let points = document.querySelector("points");
+points = 1500
 let diamond = 1000
 let gold = 500
 
 
 function addPoints(display) {
+	display.textContent = "Points: " + points;
 	if (diamond) {
 		points + diamond
-		display.textContent = "Points: " + diamond;
+		display.textContent = "Points: " + points;
 	}else if(gold){
 		points + gold
-		display.textContent = "Points: " + gold;
+		display.textContent = "Points: " + points;
 	}
+	display = document.querySelector("points");
 }
