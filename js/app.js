@@ -106,7 +106,6 @@ class GridSystem {
 		this.width = this.canvas.width = w;
 		this.height = this.canvas.height = h;
 		this.canvas.style.position = "absolute";
-		this.canvas.style.display = 'flex';
 		this.canvas.style.background = color;
 		if (isTransparent) {
 			this.canvas.style.backgroundColor = "transparent";
