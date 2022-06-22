@@ -41,6 +41,7 @@ class GridSystem {
 		this.matrix[playerY][playerX] = 2;
 
 		document.addEventListener("keydown", this.#movePlayer);
+		document.addEventListener("click", this.#dig);
 
 
 	}
@@ -90,12 +91,7 @@ class GridSystem {
 	}
 }
 
-	#dig = ( {keyCode} ) => {
-		if (keyCode === 32) {
-			color = 'brown';
-			this.render();
-		}
-	}
+		
 
 	#getCenter(w, h) {
 		return {
@@ -110,6 +106,7 @@ class GridSystem {
 		this.width = this.canvas.width = w;
 		this.height = this.canvas.height = h;
 		this.canvas.style.position = "absolute";
+		this.canvas.style.display = 'flex';
 		this.canvas.style.background = color;
 		if (isTransparent) {
 			this.canvas.style.backgroundColor = "transparent";
