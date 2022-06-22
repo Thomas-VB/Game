@@ -321,10 +321,12 @@ let diamond = 1000
 let gold = 500
 
 
-function addPoints() {
+function addPoints(display) {
 	if (diamond) {
 		points + diamond
+		display.textContent = "Points: " + diamond;
 	}else if(gold){
 		points + gold
+		display.textContent = "Points: " + gold;
 	}
 }
