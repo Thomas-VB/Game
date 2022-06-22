@@ -50,7 +50,10 @@ class GridSystem {
 	#isValidMove(x, y) {
 		if (this.matrix[this.player.y + y][this.player.x + x] === 0) {
 			return true;
+		} else if (this.matrix[this.player.y + y][this.player.x + x] === 3) {
+			return true;
 		}
+		
 		return false;
 	}
 
@@ -90,12 +93,7 @@ class GridSystem {
 	}
 }
 
-	#dig = ( {keyCode} ) => {
-		if (keyCode === 32) {
-			color = 'brown';
-			this.render();
-		}
-	}
+		
 
 	#getCenter(w, h) {
 		return {
@@ -143,10 +141,13 @@ class GridSystem {
 				let color = "#089b20";
 
 				if (cellVal === 1) {
-					color = "#089b20";
+					color = "brown";
 				} else if (cellVal === 2) {
 					color = this.player.color;
+				} else if (cellVal === 3) {
+					color = "purple";
 				}
+				
 
 				this.outlineContext.fillStyle = color;
 				this.outlineContext.fillRect(col * (this.cellSize + this.padding),
@@ -157,24 +158,20 @@ class GridSystem {
 	
 			}
 		}
-
-		this.uiContext.font = "20px Courier";
-		this.uiContext.fillStyle = "white";
-		this.uiContext.fillText("Grid Based System", 20, 30);
 	}
 }
 
 const gridMatrix = [
+	[0, 1, 0, 0, 3, 1, 3, 1, 0, 0],
+	[0, 1, 1, 0, 0, 0, 0, 0, 0, 0],
+	[0, 1, 1, 0, 0, 1, 0, 3, 1, 3],
 	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+	[3, 0, 1, 0, 0, 1, 0, 0, 0, 0],
+	[0, 0, 3, 1, 1, 1, 0, 0, 0, 0],
+	[0, 0, 0, 1, 0, 0, 0, 0, 3, 0],
+	[0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
+	[0, 1, 3, 0, 0, 0, 0, 0, 1, 0],
+	[0, 0, 0, 0, 3, 0, 0, 0, 0, 0]
 ];
 
 const gridSystem = new GridSystem(gridMatrix, 1, 1);
