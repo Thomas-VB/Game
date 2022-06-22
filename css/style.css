@@ -3,7 +3,7 @@ body{
      background-image: url("../assets/istockphoto-922427928-612x612.png");
      background-repeat: repeat;
 }
-/*main{
+main{
     max-width: 750px;
     margin:auto;
 }
@@ -21,34 +21,11 @@ h1{
     padding: 5px 5px 10px 5px;
 }
 
-
- .grid{
-    width: 750px;
-    height: 750px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.cell{
-    float: left;
-    width:70px;
-    height:70px;
-    background-color: rgba(2, 122, 2, 0.501);
-    border:1px solid whitesmoke;
-    display: table-cell;
-    vertical-align: middle;
-
-}    
-
-*/
-
 .buttons{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 20px;
+    margin: 10px;
     font-family: courier-std, monospace;
     font-weight: 700;
     font-style: normal;
