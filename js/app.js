@@ -1,15 +1,20 @@
 class GridSystem {
+
 	constructor(matrix, playerX, playerY) {
 		this.matrix = matrix;
 		this.outlineContext = this.#getContext(0, 0, "#FFF");
 		this.topContext = this.#getContext(0, 0, "#111", true);
 		this.cellSize = 70;
 		this.padding = 2;
-		this.player = { x: playerX, y: playerY, color: "orange" };
+		this.player = { x: playerX, y: playerY, color: 'yellow'};
 		this.matrix[playerY][playerX] = 2;
 
 		document.addEventListener("keydown", this.#movePlayer);
+
+
 	}
+
+
 
 	#isValidMove(x, y) {
 		if (this.matrix[this.player.y + y][this.player.x + x] === 0) {
@@ -51,6 +56,12 @@ class GridSystem {
 				this.player.y ++;
 				this.render();
 			}
+	}
+}
+
+	#dig = ( {keyCode} ) => {
+		if (keyCode === 32) {
+			color = 'brown';
 		}
 	}
 
@@ -93,13 +104,15 @@ class GridSystem {
 		this.topContext.canvas.style.marginLeft = center.x
 		this.topContext.canvas.style.marginTop = center.y;
 
+		
+
 		for (let row = 0; row < this.matrix.length; row ++) {
 			for (let col = 0; col < this.matrix[row].length; col ++) {
 				const cellVal = this.matrix[row][col];
-				let color = "#111";
+				let color = "#089b20";
 
 				if (cellVal === 1) {
-					color = "#4488FF";
+					color = "#089b20";
 				} else if (cellVal === 2) {
 					color = this.player.color;
 				}
@@ -108,6 +121,9 @@ class GridSystem {
 				this.outlineContext.fillRect(col * (this.cellSize + this.padding),
 				row * (this.cellSize + this.padding),
 				this.cellSize, this.cellSize);
+
+
+	
 			}
 		}
 
@@ -118,16 +134,16 @@ class GridSystem {
 }
 
 const gridMatrix = [
-	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-	[1, 0, 0, 0, 0, 0, 1, 1, 1, 1],
-	[1, 0, 0, 0, 0, 0, 1, 1, 1, 1],
-	[1, 0, 0, 0, 0, 0, 1, 1, 1, 1],
-	[1, 0, 1, 1, 1, 0, 1, 1, 1, 1],
-	[1, 0, 0, 0, 1, 0, 1, 1, 1, 1],
-	[1, 0, 1, 1, 1, 0, 1, 1, 1, 1],
-	[1, 0, 0, 0, 0, 0, 1, 1, 1, 1],
-	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 ];
 
 const gridSystem = new GridSystem(gridMatrix, 1, 1);
