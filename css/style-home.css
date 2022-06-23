@@ -1,31 +1,24 @@
-.container{
-    min-width: 1000px;
+body{
     background-image: url("../assets/achtergrond.png");
-    background-color: #cccccc;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-clip: border-box;
-    background-size: 100%;
-    width: 100%;
+    background-repeat: repeat;
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
  button{
-    width: 500px;
+    width: 400px;
     text-align: center;
     font-size: 32px;
     font-family: fp-head-pro, sans-serif;
     font-weight: 700;
-    font-style: normal;
     color: white;
     background-color: rgba(2, 122, 2, 0.759);
-    text-transform: capitalize;
     border: 2px solid white;
     padding: 5px 5px 10px 5px;
+}
+
+.play{
+    display: flex;
+    align-items: center;
 }
 
 a{

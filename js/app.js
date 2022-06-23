@@ -19,7 +19,7 @@ function startTimer(duration, display) {
     }, 1000);    
   }
   setTimeout(function(){
-	location.reload();
+	location.href = "./home.html"
   }, 48000);
 
   window.onload = function () {
